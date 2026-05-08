@@ -36,7 +36,7 @@ jobs:
           HASH=$(git rev-parse --short HEAD)
           TITLE=$(git log -1 --format='%s')
           BODY=$(git log -1 --format='%b')
-          INFO="$HASH Title: $TITLE Description: $BODY"
+          INFO="$HASH Title: $TITLE"
           sed -i "s/BUILD_INFO/$INFO/" index.html
       - name: Setup Pages
         uses: actions/configure-pages@v5
